@@ -9,24 +9,24 @@ on buildings that the user can click to receive information on the building, suc
 
 **User Stories**
 Desires
- Startup Page with Gustavus logo
- Google Map of Gustavus
-o Displays active location
-o Displays highlighted Buildings (if chosen)
- Buildings can be clicked
- Buildings link to their specific GAC website
- Buildings show information (optional if enough time)
-o Displays personal Pins
- Pins can be created/placed
- Pins can be moved
- Pins can be deleted
- Pins can be edited
- Pins should be persistent between sessions
+* Startup Page with Gustavus logo
+* Google Map of Gustavus
+ * Displays active location
+ *Displays highlighted Buildings (if chosen)
+* Buildings can be clicked
+* Buildings link to their specific GAC website
+* Buildings show information (optional if enough time)
+ * Displays personal Pins
+* Pins can be created/placed
+* Pins can be moved
+* Pins can be deleted
+* Pins can be edited
+* Pins should be persistent between sessions
 
- Should have Settings
-o Highlight Buildings (Y/N)
-o Satellite vs. Default Google Map view
-o Ability to delete all pins at once (and confirm before it happens)s
+* Should have Settings
+ * Highlight Buildings (Y/N)
+ * Satellite vs. Default Google Map view
+ * Ability to delete all pins at once (and confirm before it happens)s
 
 User Stories Total Time: 19 days, Priority Time: 12 days
 **PRIORITY**: STARTUP PAGE: GAC logo displays on app startup (1 day)
