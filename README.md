@@ -29,6 +29,7 @@ Desires
   - Ability to delete all pins at once (and confirm before it happens)s
 
 User Stories Total Time: 19 days, Priority Time: 12 days
+
 **PRIORITY**: STARTUP PAGE: GAC logo displays on app startup (1 day)
 
 **PRIORITY**: MAP OVERVIEW: main display is a Google map view of campus (1 day)
