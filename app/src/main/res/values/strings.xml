@@ -9,4 +9,7 @@
     <string name="lat_long_snippet">Lat: %1$.5f, Long: %2$.5f</string>
     <string name="dropped_pin">Dropped Pin</string>
     <string name="poi">poi</string>
+    <string name="academic_buildings">Academic Buildings</string>
+    <string name="housing_buildings">Housing Buildings</string>
+    <string name="poi_landmarks">POI Landmarks</string>
 </resources>
