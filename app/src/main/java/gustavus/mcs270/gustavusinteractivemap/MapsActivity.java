@@ -21,6 +21,7 @@ import com.google.android.gms.maps.SupportStreetViewPanoramaFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -33,6 +34,9 @@ public class MapsActivity extends AppCompatActivity implements
 
     private static final String TAG = MapsActivity.class.getSimpleName();
 
+    final LatLngBounds theMaxBoundary = new LatLngBounds(
+            new LatLng(MAXIMUM_LATITUDE, MAXIMUM_LONGITUDE), new LatLng(MINIMUM_LATITUDE, MINIMUM_LONGITUDE));
+
     public static final double MAXIMUM_LATITUDE = 44.333099;
     public static final double MINIMUM_LATITUDE = 44.317553;
     public static final double MAXIMUM_LONGITUDE = -93.964821;
@@ -41,6 +45,11 @@ public class MapsActivity extends AppCompatActivity implements
     private static final int REQUEST_LOCATION_PERMISSION = 1;
     public static final float INITIAL_ZOOM = 12f;
     private GoogleMap mMap;
+
+    private LatLngBounds GUSTAVUS = new LatLngBounds(
+            new LatLng(MAXIMUM_LATITUDE, MAXIMUM_LONGITUDE),
+            new LatLng(MINIMUM_LATITUDE, MINIMUM_LONGITUDE));
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +118,8 @@ public class MapsActivity extends AppCompatActivity implements
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        //lock camera to gustavus campus
+        mMap.setLatLngBoundsForCameraTarget(GUSTAVUS);
         // Pan the camera to the center of Gustavus
         LatLng gustavus = new LatLng(44.322979, -93.972344);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gustavus, INITIAL_ZOOM));
