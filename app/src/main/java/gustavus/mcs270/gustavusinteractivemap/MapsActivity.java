@@ -33,6 +33,11 @@ public class MapsActivity extends AppCompatActivity implements
 
     private static final String TAG = MapsActivity.class.getSimpleName();
 
+    //call these so we know if we should display the marks of specific things or not.
+    public static boolean ENABLE_OR_DISABLE_ACADEMIC_BUILIDINGS = false;
+    public static boolean ENABLE_OR_DISABLE_HOUSING_BUILDINGS = false;
+    public static boolean ENABLE_OR_DISABLE_POINTSOFINTEREST = false;
+
     private static final int REQUEST_LOCATION_PERMISSION = 1;
     public static final float INITIAL_ZOOM = 12f;
     private GoogleMap mMap;
@@ -87,15 +92,15 @@ public class MapsActivity extends AppCompatActivity implements
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Pan the camera to your home address (in this case, Google HQ).
-        LatLng home = new LatLng(37.421982, -122.085109);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, INITIAL_ZOOM));
-
+        // Pan the camera to the center of Gustavus
+        LatLng gustavus = new LatLng(44.322979, -93.972344);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gustavus, INITIAL_ZOOM));
 
         setMapLongClick(mMap); // Set a long click listener for the map;
         setPoiClick(mMap); // Set a click listener for points of interest.
         setMapStyle(mMap); // Set the custom map style.
         enableMyLocation(mMap); // Enable location tracking.
+        //initMapPOIs(mMap);
         // Enable going into StreetView by clicking on an InfoWindow from a
         // point of interest.
         setInfoWindowClickToPanorama(mMap);
@@ -106,6 +111,7 @@ public class MapsActivity extends AppCompatActivity implements
      *
      * @param map The GoogleMap to attach the listener to.
      */
+
     private void setMapLongClick(final GoogleMap map) {
 
         // Add a blue marker to the map when the user performs a long click.
@@ -125,6 +131,118 @@ public class MapsActivity extends AppCompatActivity implements
                                 (BitmapDescriptorFactory.HUE_BLUE)));
             }
         });
+    }
+
+    /**
+     * Adds housing points of interest to the map
+     *
+     * @param googleMap the GoogleMap that will be populated
+     */
+    private void initHousingPOIs(GoogleMap googleMap){
+
+        //housing buildings
+        LatLng prairieView = new LatLng(44.322979, -93.972344);
+        LatLng southwest = new LatLng(44.322979, -93.972344);
+        LatLng norelius = new LatLng(44.322979, -93.972344);
+        LatLng pittman = new LatLng(44.322979, -93.972344);
+        LatLng sohre = new LatLng(44.322979, -93.972344);
+        LatLng collegeView = new LatLng(44.322979, -93.972344);
+        LatLng arborView = new LatLng(44.322979, -93.972344);
+        LatLng chapelView = new LatLng(44.322979, -93.972344);
+        LatLng complex = new LatLng(44.322979, -93.972344);
+        LatLng internationalHouse = new LatLng(44.322979, -93.972344);
+        LatLng uhler = new LatLng(44.322979, -93.972344);
+        LatLng rundstrom = new LatLng(44.322979, -93.972344);
+
+        //add the markers of academic buildings //can add.title to give more description
+        googleMap.addMarker(new MarkerOptions().position(prairieView));
+        googleMap.addMarker(new MarkerOptions().position(southwest));
+        googleMap.addMarker(new MarkerOptions().position(norelius));
+        googleMap.addMarker(new MarkerOptions().position(pittman));
+        googleMap.addMarker(new MarkerOptions().position(sohre));
+        googleMap.addMarker(new MarkerOptions().position(collegeView));
+        googleMap.addMarker(new MarkerOptions().position(arborView));
+        googleMap.addMarker(new MarkerOptions().position(chapelView));
+        googleMap.addMarker(new MarkerOptions().position(complex));
+        googleMap.addMarker(new MarkerOptions().position(internationalHouse));
+        googleMap.addMarker(new MarkerOptions().position(uhler));
+        googleMap.addMarker(new MarkerOptions().position(rundstrom));
+
+    }
+
+    /**
+     * Adds land mark points of interest to the map
+     *
+     * @param googleMap the GoogleMap that will be populated
+     */
+    private void initLandMarkPOIS(GoogleMap googleMap){
+
+        //POI buildings and landmarks
+        LatLng arboretum = new LatLng(44.322979, -93.972344);
+        LatLng christChapel = new LatLng(44.322979, -93.972344);
+        LatLng campusCenter = new LatLng(44.322979, -93.972344);
+        LatLng studentUnion = new LatLng(44.322979, -93.972344);
+        LatLng tennisBubble = new LatLng(44.322979, -93.972344);
+        LatLng footballField = new LatLng(44.322979, -93.972344);
+        LatLng soccerField = new LatLng(44.322979, -93.972344);
+        LatLng baseballField = new LatLng(44.322979, -93.972344);
+        LatLng softballField = new LatLng(44.322979, -93.972344);
+        LatLng golfBuilding = new LatLng(44.322979, -93.972344);
+        LatLng greenhouse = new LatLng(44.322979, -93.972344);
+        LatLng bigHillFarm = new LatLng(44.322979, -93.972344);
+        LatLng physicalPlant = new LatLng(44.322979, -93.972344);
+        LatLng presidentsHouse = new LatLng(44.322979, -93.972344);
+
+        //add the markers of academic buildings //can add.title to give more description
+        googleMap.addMarker(new MarkerOptions().position(arboretum));
+        googleMap.addMarker(new MarkerOptions().position(christChapel));
+        googleMap.addMarker(new MarkerOptions().position(campusCenter));
+        googleMap.addMarker(new MarkerOptions().position(studentUnion));
+        googleMap.addMarker(new MarkerOptions().position(tennisBubble));
+        googleMap.addMarker(new MarkerOptions().position(footballField));
+        googleMap.addMarker(new MarkerOptions().position(soccerField));
+        googleMap.addMarker(new MarkerOptions().position(baseballField));
+        googleMap.addMarker(new MarkerOptions().position(softballField));
+        googleMap.addMarker(new MarkerOptions().position(golfBuilding));
+        googleMap.addMarker(new MarkerOptions().position(greenhouse));
+        googleMap.addMarker(new MarkerOptions().position(bigHillFarm));
+        googleMap.addMarker(new MarkerOptions().position(physicalPlant));
+        googleMap.addMarker(new MarkerOptions().position(presidentsHouse));
+    }
+
+    /**
+     * Adds academic builiding points of interest to the map
+     *
+     * @param googleMap the GoogleMap that will be populated
+     */
+    private void initAcademicPOIs(GoogleMap googleMap){
+
+        //academic buildings.
+        LatLng olin = new LatLng(44.322979, -93.972344);
+        LatLng nobel = new LatLng(44.322979, -93.972344);
+        LatLng lund = new LatLng(44.322979, -93.972344);
+        LatLng bjorling = new LatLng(44.322979, -93.972344);
+        LatLng library = new LatLng(44.322979, -93.972344);
+        LatLng beck = new LatLng(44.322979, -93.972344);
+        LatLng conferVickner = new LatLng(44.322979, -93.972344);
+        LatLng mattsonHall = new LatLng(44.322979, -93.972344);
+        LatLng anderson = new LatLng(44.322979, -93.972344);
+        LatLng schaeffer = new LatLng(44.322979, -93.972344);
+        LatLng interpretiveCenter = new LatLng(44.322979, -93.972344);
+
+        //add the markers of academic buildings //can add.title to give more description
+        googleMap.addMarker(new MarkerOptions().position(olin));
+        googleMap.addMarker(new MarkerOptions().position(nobel));
+        googleMap.addMarker(new MarkerOptions().position(lund));
+        googleMap.addMarker(new MarkerOptions().position(bjorling));
+        googleMap.addMarker(new MarkerOptions().position(library));
+        googleMap.addMarker(new MarkerOptions().position(beck));
+        googleMap.addMarker(new MarkerOptions().position(conferVickner));
+        googleMap.addMarker(new MarkerOptions().position(mattsonHall));
+        googleMap.addMarker(new MarkerOptions().position(anderson));
+        googleMap.addMarker(new MarkerOptions().position(schaeffer));
+        googleMap.addMarker(new MarkerOptions().position(interpretiveCenter));
+
     }
 
     /**
