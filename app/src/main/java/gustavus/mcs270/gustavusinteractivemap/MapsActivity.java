@@ -119,13 +119,14 @@ public class MapsActivity extends AppCompatActivity implements
         mMap.setLatLngBoundsForCameraTarget(GUSTAVUS);
         // Pan the camera to the center of Gustavus
         LatLng gustavus = new LatLng(44.322979, -93.972344);
+        //googleMap.addMarker(new MarkerOptions().position(gustavus).title("Gustavus"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gustavus, INITIAL_ZOOM));
+        //initLandMarkPOIS(mMap);
 
         setMapLongClick(mMap); // Set a long click listener for the map;
         setPoiClick(mMap); // Set a click listener for points of interest.
         setMapStyle(mMap); // Set the custom map style.
         enableMyLocation(mMap); // Enable location tracking.
-        //initMapPOIs(mMap);
         // Enable going into StreetView by clicking on an InfoWindow from a
         // point of interest.
         setInfoWindowClickToPanorama(mMap);
@@ -181,20 +182,20 @@ public class MapsActivity extends AppCompatActivity implements
         LatLng rundstrom = new LatLng(44.321869, -93.969700);
 
         //add the markers of academic buildings //can add.title to give more description
-        googleMap.addMarker(new MarkerOptions().position(prairieView));
-        googleMap.addMarker(new MarkerOptions().position(southwest));
-        googleMap.addMarker(new MarkerOptions().position(norelius));
-        googleMap.addMarker(new MarkerOptions().position(pittman));
-        googleMap.addMarker(new MarkerOptions().position(sohre));
-        googleMap.addMarker(new MarkerOptions().position(collegeView));
-        googleMap.addMarker(new MarkerOptions().position(arborView));
-        googleMap.addMarker(new MarkerOptions().position(chapelView));
-        googleMap.addMarker(new MarkerOptions().position(gibbs));
-        googleMap.addMarker(new MarkerOptions().position(sorenson));
-        googleMap.addMarker(new MarkerOptions().position(north));
-        googleMap.addMarker(new MarkerOptions().position(internationalHouse));
-        googleMap.addMarker(new MarkerOptions().position(uhler));
-        googleMap.addMarker(new MarkerOptions().position(rundstrom));
+        googleMap.addMarker(new MarkerOptions().position(prairieView).title("Prairie View"));
+        googleMap.addMarker(new MarkerOptions().position(southwest).title("Southwest"));
+        googleMap.addMarker(new MarkerOptions().position(norelius).title("Noerlius"));
+        googleMap.addMarker(new MarkerOptions().position(pittman).title("Pittman"));
+        googleMap.addMarker(new MarkerOptions().position(sohre).title("Sohre"));
+        googleMap.addMarker(new MarkerOptions().position(collegeView).title("College View"));
+        googleMap.addMarker(new MarkerOptions().position(arborView).title("Arbor View"));
+        googleMap.addMarker(new MarkerOptions().position(chapelView).title("Chapel View"));
+        googleMap.addMarker(new MarkerOptions().position(gibbs).title("Gibbs Hall"));
+        googleMap.addMarker(new MarkerOptions().position(sorenson).title("Sorenson"));
+        googleMap.addMarker(new MarkerOptions().position(north).title("North"));
+        googleMap.addMarker(new MarkerOptions().position(internationalHouse).title("International House"));
+        googleMap.addMarker(new MarkerOptions().position(uhler).title("Uhler hall"));
+        googleMap.addMarker(new MarkerOptions().position(rundstrom).title("Rundstrom"));
 
     }
 
@@ -220,18 +221,18 @@ public class MapsActivity extends AppCompatActivity implements
         LatLng presidentsHouse = new LatLng(44.325432, -93.975606);
 
         //add the markers of academic buildings //can add.title to give more description
-        googleMap.addMarker(new MarkerOptions().position(arboretum));
-        googleMap.addMarker(new MarkerOptions().position(christChapel));
-        googleMap.addMarker(new MarkerOptions().position(campusCenter));
-        googleMap.addMarker(new MarkerOptions().position(studentUnion));
-        googleMap.addMarker(new MarkerOptions().position(tennisBubble));
-        googleMap.addMarker(new MarkerOptions().position(footballField));
-        googleMap.addMarker(new MarkerOptions().position(soccerField));
-        googleMap.addMarker(new MarkerOptions().position(baseballField));
-        googleMap.addMarker(new MarkerOptions().position(softballField));
-        googleMap.addMarker(new MarkerOptions().position(bigHillFarm));
-        googleMap.addMarker(new MarkerOptions().position(physicalPlant));
-        googleMap.addMarker(new MarkerOptions().position(presidentsHouse));
+        googleMap.addMarker(new MarkerOptions().position(arboretum).title("Arboretum"));
+        googleMap.addMarker(new MarkerOptions().position(christChapel).title("Christ Chapel"));
+        googleMap.addMarker(new MarkerOptions().position(campusCenter).title("Campus Center"));
+        googleMap.addMarker(new MarkerOptions().position(studentUnion).title("Student Union"));
+        googleMap.addMarker(new MarkerOptions().position(tennisBubble).title("Tennis Bubble"));
+        googleMap.addMarker(new MarkerOptions().position(footballField).title("Football Field"));
+        googleMap.addMarker(new MarkerOptions().position(soccerField).title("Soccer Field"));
+        googleMap.addMarker(new MarkerOptions().position(baseballField).title("Baseball Field"));
+        googleMap.addMarker(new MarkerOptions().position(softballField).title("Softball Field"));
+        googleMap.addMarker(new MarkerOptions().position(bigHillFarm).title("Big Hill Farm"));
+        googleMap.addMarker(new MarkerOptions().position(physicalPlant).title("Physical Plant"));
+        googleMap.addMarker(new MarkerOptions().position(presidentsHouse).title("Presidents Housee"));
     }
 
     /**
@@ -256,18 +257,18 @@ public class MapsActivity extends AppCompatActivity implements
         LatLng interpretiveCenter = new LatLng(44.319928, -93.975234);
 
         //add the markers of academic buildings //can add.title to give more description
-        googleMap.addMarker(new MarkerOptions().position(olin));
-        googleMap.addMarker(new MarkerOptions().position(nobel));
-        googleMap.addMarker(new MarkerOptions().position(lund));
-        googleMap.addMarker(new MarkerOptions().position(bjorling));
-        googleMap.addMarker(new MarkerOptions().position(library));
-        googleMap.addMarker(new MarkerOptions().position(beck));
-        googleMap.addMarker(new MarkerOptions().position(confer));
-        googleMap.addMarker(new MarkerOptions().position(vicker));
-        googleMap.addMarker(new MarkerOptions().position(mattsonHall));
-        googleMap.addMarker(new MarkerOptions().position(anderson));
-        googleMap.addMarker(new MarkerOptions().position(schaeffer));
-        googleMap.addMarker(new MarkerOptions().position(interpretiveCenter));
+        googleMap.addMarker(new MarkerOptions().position(olin).title("Olin"));
+        googleMap.addMarker(new MarkerOptions().position(nobel).title("Nobel"));
+        googleMap.addMarker(new MarkerOptions().position(lund).title("Lund Center"));
+        googleMap.addMarker(new MarkerOptions().position(bjorling).title("Bjorling"));
+        googleMap.addMarker(new MarkerOptions().position(library).title("Library"));
+        googleMap.addMarker(new MarkerOptions().position(beck).title("Beck"));
+        googleMap.addMarker(new MarkerOptions().position(confer).title("Confer"));
+        googleMap.addMarker(new MarkerOptions().position(vicker).title("Vickner"));
+        googleMap.addMarker(new MarkerOptions().position(mattsonHall).title("Mattson Hall"));
+        googleMap.addMarker(new MarkerOptions().position(anderson).title("Anderson"));
+        googleMap.addMarker(new MarkerOptions().position(schaeffer).title("Schaeffer"));
+        googleMap.addMarker(new MarkerOptions().position(interpretiveCenter).title("Interpretive Center"));
 
     }
 
