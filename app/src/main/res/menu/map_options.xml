@@ -7,10 +7,10 @@
     <item android:id="@+id/hybrid_map"
         android:title="@string/hybrid_map"
         app:showAsAction="never"/>
-    <item android:id="@+id/satellite_map"
-        android:title="@string/satellite_map"
-        app:showAsAction="never"/>
     <item android:id="@+id/terrain_map"
         android:title="@string/terrain_map"
         app:showAsAction="never"/>
+    <item android:id="@+id/toggler"
+        android:title="PINS"
+        app:showAsAction="always"/>
 </menu>

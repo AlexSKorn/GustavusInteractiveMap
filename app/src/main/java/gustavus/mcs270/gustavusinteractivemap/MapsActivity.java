@@ -34,21 +34,21 @@ public class MapsActivity extends AppCompatActivity implements
 
     private static final String TAG = MapsActivity.class.getSimpleName();
 
-    final LatLngBounds theMaxBoundary = new LatLngBounds(
-            new LatLng(MAXIMUM_LATITUDE, MAXIMUM_LONGITUDE), new LatLng(MINIMUM_LATITUDE, MINIMUM_LONGITUDE));
-
     public static final double MAXIMUM_LATITUDE = 44.333099;
     public static final double MINIMUM_LATITUDE = 44.317553;
     public static final double MAXIMUM_LONGITUDE = -93.964821;
     public static final double MINIMUM_LONGITUDE = -93.986193;
 
+    //NE corner is 44.332026,-93.963881
+    //SW corner is 44.317890,-93.985767
+
     private static final int REQUEST_LOCATION_PERMISSION = 1;
-    public static final float INITIAL_ZOOM = 12f;
+    public static final float INITIAL_ZOOM = 17f;
     private GoogleMap mMap;
 
-    private LatLngBounds GUSTAVUS = new LatLngBounds(
-            new LatLng(MAXIMUM_LATITUDE, MAXIMUM_LONGITUDE),
-            new LatLng(MINIMUM_LATITUDE, MINIMUM_LONGITUDE));
+    public final LatLngBounds GUSTAVUS = new LatLngBounds(
+            new LatLng(44.317890, -93.985767),
+            new LatLng(44.332026, -93.963881));
 
 
     @Override
@@ -80,9 +80,6 @@ public class MapsActivity extends AppCompatActivity implements
                 return true;
             case R.id.hybrid_map:
                 mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-                return true;
-            case R.id.satellite_map:
-                mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
                 return true;
             case R.id.terrain_map:
                 mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
