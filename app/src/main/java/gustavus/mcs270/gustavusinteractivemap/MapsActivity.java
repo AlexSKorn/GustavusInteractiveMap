@@ -84,6 +84,17 @@ public class MapsActivity extends AppCompatActivity implements
             case R.id.terrain_map:
                 mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
                 return true;
+            case R.id.academic_buildings:
+                initAcademicPOIs(mMap);
+                return true;
+            case R.id.housing_buildings:
+                initHousingPOIs(mMap);
+                return true;
+            case R.id.poi_landmarks:
+                initLandMarkPOIS(mMap);
+                return true;
+            case R.id.remove_pins:
+                mMap.clear();
             default:
                 return super.onOptionsItemSelected(item);
         }
