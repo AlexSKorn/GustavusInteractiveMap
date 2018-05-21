@@ -193,20 +193,20 @@ public class MapsActivity extends AppCompatActivity implements
         LatLng rundstrom = new LatLng(44.321869, -93.969700);
 
         //add the markers of academic buildings //can add.title to give more description
-        googleMap.addMarker(new MarkerOptions().position(prairieView).title("Prairie View"));
-        googleMap.addMarker(new MarkerOptions().position(southwest).title("Southwest"));
-        googleMap.addMarker(new MarkerOptions().position(norelius).title("Noerlius"));
-        googleMap.addMarker(new MarkerOptions().position(pittman).title("Pittman"));
-        googleMap.addMarker(new MarkerOptions().position(sohre).title("Sohre"));
-        googleMap.addMarker(new MarkerOptions().position(collegeView).title("College View"));
-        googleMap.addMarker(new MarkerOptions().position(arborView).title("Arbor View"));
-        googleMap.addMarker(new MarkerOptions().position(chapelView).title("Chapel View"));
-        googleMap.addMarker(new MarkerOptions().position(gibbs).title("Gibbs Hall"));
-        googleMap.addMarker(new MarkerOptions().position(sorenson).title("Sorenson"));
-        googleMap.addMarker(new MarkerOptions().position(north).title("North"));
-        googleMap.addMarker(new MarkerOptions().position(internationalHouse).title("International House"));
-        googleMap.addMarker(new MarkerOptions().position(uhler).title("Uhler hall"));
-        googleMap.addMarker(new MarkerOptions().position(rundstrom).title("Rundstrom"));
+        googleMap.addMarker(new MarkerOptions().position(prairieView).title("Prairie View").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(southwest).title("Southwest").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(norelius).title("Noerlius").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(pittman).title("Pittman").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(sohre).title("Sohre").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(collegeView).title("College View").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(arborView).title("Arbor View").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(chapelView).title("Chapel View").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(gibbs).title("Gibbs Hall").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(sorenson).title("Sorenson").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(north).title("North").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(internationalHouse).title("International House").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(uhler).title("Uhler hall").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        googleMap.addMarker(new MarkerOptions().position(rundstrom).title("Rundstrom").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
     }
 
@@ -232,18 +232,18 @@ public class MapsActivity extends AppCompatActivity implements
         LatLng presidentsHouse = new LatLng(44.325432, -93.975606);
 
         //add the markers of academic buildings //can add.title to give more description
-        googleMap.addMarker(new MarkerOptions().position(arboretum).title("Arboretum"));
-        googleMap.addMarker(new MarkerOptions().position(christChapel).title("Christ Chapel"));
-        googleMap.addMarker(new MarkerOptions().position(campusCenter).title("Campus Center"));
-        googleMap.addMarker(new MarkerOptions().position(studentUnion).title("Student Union"));
-        googleMap.addMarker(new MarkerOptions().position(tennisBubble).title("Tennis Bubble"));
-        googleMap.addMarker(new MarkerOptions().position(footballField).title("Football Field"));
-        googleMap.addMarker(new MarkerOptions().position(soccerField).title("Soccer Field"));
-        googleMap.addMarker(new MarkerOptions().position(baseballField).title("Baseball Field"));
-        googleMap.addMarker(new MarkerOptions().position(softballField).title("Softball Field"));
-        googleMap.addMarker(new MarkerOptions().position(bigHillFarm).title("Big Hill Farm"));
-        googleMap.addMarker(new MarkerOptions().position(physicalPlant).title("Physical Plant"));
-        googleMap.addMarker(new MarkerOptions().position(presidentsHouse).title("Presidents Housee"));
+        googleMap.addMarker(new MarkerOptions().position(arboretum).title("Arboretum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(christChapel).title("Christ Chapel").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(campusCenter).title("Campus Center").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(studentUnion).title("Student Union").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(tennisBubble).title("Tennis Bubble").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(footballField).title("Football Field").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(soccerField).title("Soccer Field").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(baseballField).title("Baseball Field").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(softballField).title("Softball Field").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(bigHillFarm).title("Big Hill Farm").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(physicalPlant).title("Physical Plant").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+        googleMap.addMarker(new MarkerOptions().position(presidentsHouse).title("Presidents Housee").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
     }
 
     /**
